@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+:root{
+  --cor-amarelo: #d59d80;
+  --cor-amarelo-escuro: #c0754d;
+  --cor-azul: #5fa8ac;
+  --cor-azul-claro: #87c1c4;
+   --cor-bege: #fec382;
+  --cor-bege-claro: #feeaca;
+  --cor-branco: #ffffff;
+  --cor-laranja: #df600b;
+  --cor-laranja-escuro: #fd8251;
+  --cor-vermelho: #b51a2b;
+  --cor-teste: #900c3e;
+  --cor-azul-escuro: #242f49;
+  --cor-vermelho-escuro: #93413e;
+  --cor-nuvem: rgba(255, 255, 255, .5)
+}
+
+body{
+  background: var(--cor-azul-claro);
+}
+
+.container{
+  background: var(--cor-azul);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 700px;
+  width: 700px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.cesto{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cor-vermelho);
+  height: 120px;
+  width: 180px;
+  border-radius: 0% 0% 50% 50%;
+  overflow: hidden;
+}
+
+.base{
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background: var(--cor-vermelho);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20%;
+  z-index: 10;
+}
+
+.decoracao{
+  position: absolute;
+  width: 180px;
+  height: 60px;
+  bottom: 8%;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.decoracao1{
+  height: 100px;
+  width: 50px;
+  background: var(--cor-azul-escuro);
+  border-radius: 50%;
+}
+
+.faixa{
+  position: absolute;
+  top: 20px;
+  height: 20px;
+  width: 180px;
+  background: var(--cor-amarelo);  
+}
+
+.coelho{
+  position: absolute;
+  height: 80px;
+  width: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 150px;
+  transition: all .5s ease-in-out;
+}
+
+.coelho:hover{
+  bottom: 195px;
+}
+
+.rosto{
+  position: absolute;
+  bottom: -45px;
+  height: 90px;
+  width: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--cor-bege-claro);
+  overflow: hidden;
+}
+
+.rosto::before{
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  left: 50%;
+  bottom: 65%;
+  background: var(--cor-bege);
+}
+
+.olhos{
+  position: absolute;
+  height: 5px;
+  width:  5px;
+  background: var(--cor-vermelho-escuro);
+  top: 30px;
+  left: 25px;
+  border-radius: 50%;
+}
+
+.olhos::before{
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  left: 35px;
+  background: var(--cor-vermelho-escuro);
+}
+
+.nariz{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #949396;
+  border-top: 5px solid var(--cor-vermelho-escuro);
+}
+
+.nariz::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  height: 20px;
+  width: 2px;
+  background: var(--cor-vermelho-escuro);
+}
+
+.nariz::after{
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -10px;
+  bottom: 0px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: transparent;
+  border-bottom: 3px solid var(--cor-vermelho-escuro);
+}
+
+.bigode{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 60px;
+  left: 0px;
+  border-radius: 50%;
+  background: transparent;
+  border-top: 1px solid var(--cor-vermelho-escuro);
+  transform: rotate(15deg);
+}
+
+.bigode::after{
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 10px;
+  left: 5px;
+  background: transparent;
+  border-top: 1px solid var(--cor-vermelho-escuro);
+  transform: rotate(-25deg);
+}
+
+.bigodedireito{
+  left: 90px;
+  transform: scaleX(-1);
+}
+
+.bigode::after.bigodedireito{
+  transform: scaleX(-1);
+}
+
+.orelha{
+  position: absolute;
+  height: 65px;
+  width: 25px;
+  background: var(--cor-bege-claro);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+.orelha::after{
+  content: "";
+  position: absolute;
+  height: 45px;
+  width: 15px;
+  border-radius: 50%;
+  background: var(--cor-laranja);
+  left: 5px;
+  top: 10px;
+}
+
+.orelhadireita{
+  left: 90px;
+  background: var(--cor-bege);
+  transform: rotate(45deg);
+}
+
+.balao{
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%) rotate(-45deg);;
+  border-radius: 80% 25% 55% 50% / 55% 25% 80% 50%;
+  height: 250px;
+  width: 250px;
+  background: var(--cor-vermelho);
+  z-index: 5;
+  overflow: hidden;
+}
+
+.cordas{
+  position: absolute;
+  height: 350px;
+  width: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 31%;
+}
+
+.corda{
+  position: absolute;
+  left: 26px;
+  height: 350px;
+  width: 3px;
+  background: var(--cor-azul-escuro);
+  transform: rotate(-4deg);
+  z-index: -1;
+}
+
+.corda::before{
+  content: "";
+  position: absolute;
+  border: 3px solid var(--cor-azul-escuro);
+  height: 10px;
+  width: 10px;
+  bottom: 40px;
+  left: -10px;
+  border-radius: 80% 25% 55% 50% / 55% 25% 80% 50%;
+  z-index: 150;
+}
+
+.cordadireita{
+  position: absolute;
+  transform: scaleX(-1) rotate(-4deg);
+  left: 222px;
+}
+
+.balaobase{
+  position: absolute;
+  bottom: -65px;
+  width: 250px;
+  height: 70px;
+  left: 10%;
+  transform: rotate(45deg) translateX(-50%);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.balaobaseroda{
+  height: 100px;
+  width: 80px;
+  border-radius: 50%;
+  background: var(--cor-teste);
+  z-index: 50;
+}
+
+.balaobaseroda::before{
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 25px;
+  top: 10px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: var(--cor-bege-claro);
+}
+
+.balaobaseroda.roda1{
+  transform: rotate(-15deg);
+}
+
+.balaobaseroda.roda2{
+  transform: rotate(-25deg);
+}
+
+.balaobaseroda.roda3{
+  transform: rotate(25deg);
+}
+
+.balaobaseroda.roda4{
+  transform: rotate(15deg);
+}
+
+.faixas{
+  position: absolute;
+  height: 105px;
+  width: 550px;
+  left: -40%;
+  top: 120px;
+  transform: rotate(45deg);
+}
+
+.faixabalao{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 350px;
+  background: var(--cor-azul-escuro);
+}
+
+.faixabalao::before{
+  content: "";
+  position: absolute;
+  background: var(--cor-laranja-escuro);
+  width: 350px;
+  height: 20px;
+  top: 150%;
+}
+
+.faixabalao::after{
+  content: "";
+  position: absolute;
+  background: var(--cor-azul-escuro);
+  width: 350px;
+  height: 20px;
+  top: 300%;
+}
+
+.topo{
+  height: 100px;
+  width: 350px;
+  background: var(--cor-teste);
+}
+
+.nuvemtopo{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background: var(--cor-nuvem);
+  border-radius: 50%;
+}
+
+.nuvemtopo::before{
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 70px;
+  background: white;
+  border-radius: 50%;
+}
+
+.nuvemtopo::after{
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 110px;
+  top: 5px;
+  background: white;
+  border-radius: 50%;
+}
+
+.nuvembase{
+  position: absolute;
+  top: 25px;
+  height: 80px;
+  width: 200px;
+  background: white;
+  border-radius: 50%;
+}
+
+.nuvem{
+  position: absolute;
+}
+
+
+.n1{
+  right: 0px;
+  top: 50%;
+  transform: scale(0.5);
+  animation: animn1 20s ease-in-out infinite;
+}
+
+@keyframes animn1{
+  100%{
+    right: 800px;
+  }
+}
+
+.n2{
+  top: 20%;
+  left: -25%;
+  transform: scale(.7);
+  animation: animn2 10.5s ease-in-out infinite;
+}
+
+@keyframes animn2{
+  100%{
+    left: 700px;
+  }
+}
+
+.n3{
+  right: 120px;
+  animation: animn3 5s ease-in-out infinite;
+  z-index: 200;
+}
+
+@keyframes animn3{
+  100%{
+    right: 900px;
+  }
+}
+
+.n4{
+  top: 75%;
+  left: -25%;
+  animation: animn4 13s ease-in-out infinite;
+}
+
+@keyframes animn4{
+  100%{
+    left: 700px;
+  }
+}
+
+.message{
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  background: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  z-index: 150;
+  opacity: 0%;
+  transition: all .5s ease-in-out;
+}
+
+.message::before{
+  content: "";
+  position: absolute;
+  background: transparent;
+  border-top: 10px solid white;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  left: -1px;
+  bottom: -15px;
+  transform: rotate(15deg);
+}
+
+.message label{
+  font-family: 'Indie Flower', cursive;
+  font-weight: 900;
+  font-size: 20px;
+  color: gray;
+}
+
+.coelho:hover + .message{
+  opacity: 100%;
+}
